@@ -1,0 +1,9 @@
+Title: Session Management Best Practices
+Question: Which of the following is NOT a recommended practice for secure session management in Java web applications?
+A. Regenerating session IDs after login
+B. Setting appropriate session timeouts
+C. Storing session IDs in localStorage for persistence
+D. Implementing proper logout functionality
+
+Correct Answer: C
+Explanation: Storing session IDs in localStorage is not recommended because localStorage is accessible to JavaScript, making it vulnerable to XSS attacks. Session IDs should be stored in secure, HttpOnly cookies.
