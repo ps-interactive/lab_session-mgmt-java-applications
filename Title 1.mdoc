@@ -1,0 +1,9 @@
+Title: Java Deserialization Security
+Question: Which of the following is the most secure approach for handling object deserialization in Java?
+A. Using the standard ObjectInputStream for all objects
+B. Using ValidatingObjectInputStream with a whitelist of trusted classes
+C. Checking the class name after deserialization
+D. Using readObject() with try-catch to handle exceptions
+
+Correct Answer: B
+Explanation: ValidatingObjectInputStream with a whitelist of trusted classes provides the strongest security by restricting which classes can be deserialized, preventing attackers from executing arbitrary code through malicious serialized objects.
