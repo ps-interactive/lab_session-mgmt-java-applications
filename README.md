@@ -13,6 +13,7 @@ This repository contains exercise files for the Secure Session Management for Ja
 - `/src/` - Contains test files to validate implementations
 
 ## Filetree
+```
 /
 ├── README.md
 ├── pom.xml
@@ -37,6 +38,7 @@ This repository contains exercise files for the Secure Session Management for Ja
 ├── Title 6.mdoc
 ├── Title 7.mdoc
 └── lab-layout.vsix
+```
 
 ## Prerequisites
 
