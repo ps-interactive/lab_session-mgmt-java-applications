@@ -36,8 +36,7 @@ This repository contains exercise files for the Secure Session Management for Ja
 ├── Title 4.mdoc
 ├── Title 5.mdoc
 ├── Title 6.mdoc
-├── Title 7.mdoc
-└── lab-layout.vsix
+└── Title 7.mdoc
 ```
 
 ## Prerequisites
