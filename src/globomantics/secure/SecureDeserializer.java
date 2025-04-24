@@ -1,21 +1,18 @@
 package globomantics.secure;
 
 import globomantics.model.UserSession;
-import globomantics.model.UserCredentials;
-
 import java.io.*;
 
 /**
  * This class demonstrates secure deserialization practices.
- * Students will modify this file to implement ValidatingObjectInputStream.
+ * Students will modify this file to implement secure deserialization.
  */
 public class SecureDeserializer {
     
     /**
      * Deserializes a UserSession object from a byte array.
      * 
-     * TODO: Implement secure deserialization using ValidatingObjectInputStream
-     * to only allow specified trusted classes to be deserialized.
+     * TODO: Implement secure deserialization to only allow trusted classes.
      * 
      * @param serializedData the serialized data as a byte array
      * @return the deserialized UserSession object, or null if deserialization fails
@@ -24,7 +21,7 @@ public class SecureDeserializer {
         try (ByteArrayInputStream bis = new ByteArrayInputStream(serializedData);
              ObjectInputStream ois = new ObjectInputStream(bis)) {
             
-            // INSECURE: Replace this with ValidatingObjectInputStream
+            // INSECURE: This code accepts any serialized class
             Object obj = ois.readObject();
             
             if (obj instanceof UserSession) {
