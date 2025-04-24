@@ -1,11 +1,11 @@
 package globomantics.secure;
 
 import globomantics.model.UserSession;
+import org.apache.commons.io.input.ValidatingObjectInputStream;
 import java.io.*;
 
 /**
  * This class demonstrates secure deserialization practices.
- * Students will modify this file to implement secure deserialization.
  */
 public class SecureDeserializer {
     
