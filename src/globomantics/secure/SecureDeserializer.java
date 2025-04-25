@@ -3,7 +3,6 @@ package globomantics.secure;
 import globomantics.model.UserSession;
 import java.io.*;
 
-
 /**
  * This class demonstrates secure deserialization practices.
  */
