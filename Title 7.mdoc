@@ -1,21 +1,28 @@
-Title: Identifying Vulnerable Deserialization
-Question: Which of the following code snippets contains a deserialization vulnerability?
-A. ```java
+Examine the following code snippets and select the one that contains a deserialization vulnerability.
+
+{% choice %}
+{% question %}
+Which of the following code snippets contains a deserialization vulnerability?
+{% /question %}
+{% option %}
+```java
 ObjectInputStream ois = new ValidatingObjectInputStream(new ByteArrayInputStream(data));
 ((ValidatingObjectInputStream)ois).accept(UserSession.class);
 UserSession session = (UserSession) ois.readObject();
-
-B. ```java
+{% /option %} {% option answer=true %}
 ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(data));
 UserSession session = (UserSession) ois.readObject();
-C. ```java
+{% /option %} {% option %}
 String sessionData = new String(Base64.getDecoder().decode(data));
 UserSession session = new UserSession(sessionData.split(":")[0], sessionData.split(":")[1]);
-D. ```java
+{% /option %} {% option %}
 Map<String, String> sessionData = new HashMap<>();
 sessionData.put("username", username);
 sessionData.put("sessionId", sessionId);
 return sessionData;
+{% /option %} {% /choice %}
+
+
 
 Correct Answer: B
 Explanation: Option B uses standard ObjectInputStream without any validation, making it vulnerable to deserialization attacks. It will deserialize any class provided in the input, potentially allowing attackers to execute arbitrary code.
