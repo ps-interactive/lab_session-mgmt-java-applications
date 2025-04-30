@@ -1,9 +1,23 @@
-Title: CSRF Protection
-Question: Which cookie attribute helps prevent Cross-Site Request Forgery (CSRF) attacks?
-A. HttpOnly
-B. SameSite
-C. Secure
-D. Domain
+Examine the following options and select the correct answer.
 
-Correct Answer: B
-Explanation: The SameSite attribute restricts when cookies are sent with cross-site requests, helping to prevent CSRF attacks. When set to "Strict", cookies are only sent in a first-party context.
+{% choice %}
+{% question %}
+Which cookie attribute helps prevent Cross-Site Request Forgery (CSRF) attacks?
+{% /question %}
+{% option %}
+HttpOnly
+{% /option %}
+{% option answer=true %}
+SameSite
+{% /option %}
+{% option %}
+Secure
+{% /option %}
+{% option %}
+Domain
+{% /option %}
+{% /choice %}
+
+---
+**Explanation:**  
+The `SameSite` attribute restricts when cookies are sent with cross-site requests, helping to prevent CSRF attacks. When set to `"Strict"`, cookies are only sent in a first-party context.
