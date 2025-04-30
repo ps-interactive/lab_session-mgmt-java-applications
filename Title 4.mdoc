@@ -1,9 +1,23 @@
-Title: Secure Cookie Transmission
-Question: Which cookie attribute ensures that cookies are only transmitted over encrypted HTTPS connections?
-A. HttpOnly
-B. SameSite
-C. Secure
-D. Path
+Examine the following options and select the correct answer.
 
-Correct Answer: C
-Explanation: The Secure attribute ensures that cookies are only sent over HTTPS connections, not HTTP, protecting them from being intercepted during transmission.
+{% choice %}
+{% question %}
+Which cookie attribute ensures that cookies are only transmitted over encrypted HTTPS connections?
+{% /question %}
+{% option %}
+HttpOnly
+{% /option %}
+{% option %}
+SameSite
+{% /option %}
+{% option answer=true %}
+Secure
+{% /option %}
+{% option %}
+Path
+{% /option %}
+{% /choice %}
+
+---
+**Explanation:**  
+The `Secure` attribute ensures that cookies are only sent over HTTPS connections, not HTTP, protecting them from being intercepted during transmission.
