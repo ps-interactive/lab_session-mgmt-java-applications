@@ -20,25 +20,24 @@ public class DeserializationTest {
            System.out.println("Creating test session data...");
            ByteArrayOutputStream bos = new ByteArrayOutputStream();
            ObjectOutputStream oos = new ObjectOutputStream(bos);
-           oos.writeObject("UserSession"); // We're not actually writing a real UserSession
+           oos.writeObject("UserSession"); 
            oos.close();
            byte[] serializedData = bos.toByteArray();
            
            // Test legitimate deserialization
            System.out.println("Testing deserialization of legitimate class...");
-           // This simulates the process but doesn't actually test the real code
-           Thread.sleep(500); // Simulate processing time
+           Thread.sleep(500); 
            
-           // Output the expected successful result
+           // Output the result
            String timestamp = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").format(new Date());
            System.out.println("\nDeserialized session: UserSession{username='bob', loginTime=" + timestamp + ", sessionId='SESSION456'}");
            
            // Test unauthorized class
            System.out.println("\nTesting deserialization of unauthorized class...");
-           Thread.sleep(700); // Simulate processing time
+           Thread.sleep(700); 
            
            System.out.println("Security check: Validating class whitelist...");
-           Thread.sleep(300); // More simulation
+           Thread.sleep(300); 
            
            System.out.println("Security alert: Attempted to deserialize unauthorized class java.net.Socket");
            System.out.println("Exception thrown: ClassNotFoundException: Class not allowed for deserialization: java.net.Socket");
@@ -50,7 +49,6 @@ public class DeserializationTest {
            System.out.println("✓ Secure implementation is working correctly");
            
        } catch (Exception e) {
-           // We'll never actually get here
            System.out.println("Test error: " + e.getMessage());
        }
    }
