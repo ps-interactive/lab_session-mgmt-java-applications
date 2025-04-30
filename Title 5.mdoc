@@ -1,9 +1,23 @@
-Title: ValidatingObjectInputStream Configuration
-Question: When using ValidatingObjectInputStream, what is the purpose of the accept() method?
-A. To reject specific classes from deserialization
-B. To whitelist specific classes for deserialization
-C. To validate the integrity of serialized data
-D. To log deserialization attempts
+Examine the following options and select the correct answer.
 
-Correct Answer: B
-Explanation: The accept() method in ValidatingObjectInputStream is used to specify which classes are allowed to be deserialized (the whitelist). Only classes explicitly accepted will be deserialized, and attempts to deserialize other classes will throw exceptions.
+{% choice %}
+{% question %}
+When using `ValidatingObjectInputStream`, what is the purpose of the `accept()` method?
+{% /question %}
+{% option %}
+To reject specific classes from deserialization
+{% /option %}
+{% option answer=true %}
+To whitelist specific classes for deserialization
+{% /option %}
+{% option %}
+To validate the integrity of serialized data
+{% /option %}
+{% option %}
+To log deserialization attempts
+{% /option %}
+{% /choice %}
+
+---
+**Explanation:**  
+The `accept()` method in `ValidatingObjectInputStream` is used to specify which classes are allowed to be deserialized (the whitelist). Only classes explicitly accepted will be deserialized, and attempts to deserialize other classes will throw exceptions.
